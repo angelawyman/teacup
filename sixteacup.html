@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Angela Wyman's Temporary Teacup Site</title>
+  <meta name="author" content="Angela Wyman | Design and Web Development">
+  <meta name="description" content="A teacup sized website for Angela Wyman. Pinky out. World tour of my domain in under two minutes. Ready, set, GO! ">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="http://www.angelawyman.com/favicon.ico">
+  <meta property="og:image" content="http://www.angelawyman.com/assets/logo.png">
+  <meta property="og:description" content="Teacup site for web developer Angela Wyman">
+  <link rel="stylesheet" type="text/css" href="sixteacup.css">
+  <link rel="stylesheet" type="text/javascript" href="sixteacup.js">
+<script>
+// Expand hit target on product grid
+if ($(".product-grid li").length > 0){
+   $(".product-grid li  a").bigTarget({
+      hoverClass: 'active',
+      clickZone : 'li:eq(0)'
+      });
+}
+
+// Flipbook thumbnail effect
+if($('.flip').length > 0 ) {
+  $('.flip').hover(function () {
+  var numberOfImages = $(this).find('img').length;
+  var dividers = $(this).width() / numberOfImages;
+  $(this).mousemove(function(e){
+    var offset = $(this).offset();
+    var flipX = offset.left;
+    var imgToShow = Math.floor((e.pageX- flipX)/dividers);
+    $(this).find('img').hide();
+    $(this).find('img').eq(imgToShow).show();
+  })
+},function () {});
+
+$('.flip').mousewheel(function(event, delta) {
+  var imgToShow = Math.floor(Math.abs(delta));
+  $(this).find('img').hide();
+  $(this).find('img').eq(imgToShow).show();
+  });
+}</script>
+  <!-- temporary website Angela (pronounced AHN-hey-la) was born in Lima, Peru, grew up in Chapel Hill, NC, and now lives in Williamsburg-Brooklyn, with her tiny-robot builder son. She has over a decade practise in design technology and the arts. She believes in the power of creativity problem solving.-->
+</head>
+<body>
+  <div class="outer">
+<!-- FLUID GRID -->
+    <ul id="grid">
+      <li>
+        <a href="mailto:angelawyman@me.com?Subject=Hello%20There!" target="_top">
+        <div class="icons">
+          <div class="icon-slide-container">
+            <img class="slide-icon" alt="About Me" height="220" src="images/boxMe3b.png">
+          </div>
+        </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://goo.gl/maps/1RZud" target="_blank">
+        <div class="icons">
+          <div class="icon-slide-container crossfade">
+            <img class="bottom" alt="Map" height="220" src="images/boxMap19bottom.png">
+            <img class="top" alt="Location" height="220" src="images/boxMap19.png">
+          </div>
+        </div>
+        </a>
+      </li>
+      <li> 
+        <a href="https://twitter.com/AngelaWyman" target="_blank">
+          <div class="contain">
+            <div class="twitter-bird step"></div>
+          </div>
+        </a>
+      </li>
+
+       <li class= "yellow hover">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/projects2.png">
+              </div>
+          </div>
+        </div>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="product-grid" style="display:none">
+      <li class="flip pink">
+          <h2><a href="/projects/gnomes/">Illustration: Gnomes</a></h2>
+            <img src="images/gnome_220.png" width="220" height="220" alt="Gnomes illustration"/>
+      </li>
+      <li class="flip lime">
+          <h2><a href="/projects/robots/">Illustration: Robots</a></h2>
+            <img src="images/redrobot_220.png" width="220" height="220" alt="Robots illustration" style="display: none;"/>
+      </li>
+            <li class="flip pink">
+          <h2><a href="/projects/gnomes/">Illustration:  Astro</a></h2>
+            <img src="images/astro_220.png" width="220" height="220" alt="Astronaut illustration"/>
+      </li>        
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>           
+      <li class= "project">
+        <a href="http://www.angelawyman.com/projects" target="_blank">
+        <div class="icons">
+          <div class="projects">
+                <div class="icon-slide-container">
+                  <img class="tint" alt="glowing yellow square" height="220" src="images/postit.png">
+                </div>
+          </div>
+        </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+   
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js">
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34646037-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

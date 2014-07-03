@@ -1,0 +1,287 @@
+
+/* messy-messy code */
+/* lemon #e6ed00 */
+
+/* Reset
+******************************************/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body { 
+  line-height: 1; 
+}
+ol,ul { 
+  list-style: none; 
+}
+
+blockquote,q { quotes: none; }
+blockquote:before,blockquote:after,q:before,q:after { content: none; }
+:focus { outline: 0; }
+
+input.text,textarea {
+  -webkit-appearance:none;
+  border-radius:0;
+}
+
+/* Custom
+******************************************/
+
+body {
+  background-color: #f8f8f8;  /*background:#e6ed00;*/
+  color: #333;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: .9em;
+  line-height: 1.4em;
+}
+.outer {
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+ul {
+  display:block;
+}
+ul li.hover {
+  cursor:pointer;
+} 
+a {
+  text-decoration: none;
+  cursor: auto;
+}
+
+/* Fluid grid styles
+******************************************/
+
+#grid {
+  margin-top: 60px; /* -makes yellow bigger*/
+  text-align: justify;
+  font-size: 0.1px;
+  height:80%;
+  /*background:#e6ed00;*/
+}
+#grid li{
+  display: inline-block;
+  /*width: 49%;*/
+  margin:12px;
+  min-width: 220px;
+  max-width: 220px;
+  height: 220px;
+  margin-top: 5%; 
+  margin-bottom: 1%;
+  position:relative;
+  float:left;
+}
+#grid:after{
+  /* render your img tag empty cause of the content: "" -- then
+Add: style="background-image: url(image.jpg)" to your img element in html.*/
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+#grid .span .placeholder{
+  padding: 0;
+  visibility: none;
+  text-align:justify;
+}
+
+#grid img :hover {  
+    opacity: .05;  
+    cursor: pointer;  
+}  
+
+/* also above hover layer of icon-slide-container */
+
+#social a:hover{
+  color:peru;
+}
+.icon-slide-container{
+  height:220px;
+  overflow:hidden;
+  text-align: left;
+  position: absolute;
+  float: left;
+  width: 220px;
+  left: 50%;
+  margin-left: -110px;
+  /*background:yellowgreen;*/
+}
+.slide-icon{
+  width:220px;
+  height:auto;
+  position:absolute;
+  margin-top:0px;
+
+  -webkit-transition:.4s ease;
+  -moz-transition:.4s ease;
+  -ms-transition:.4s ease;
+  -o-transition:.4s ease;
+  transition:.4 ease;
+}
+/* above layer of icon-slide-container */
+.slide-icon:hover{
+  position:absolute;
+  margin-top:-220px;
+  /*background: plum;*/
+}
+.slide-icon.tinted-image {
+  background: 
+    linear-gradient(
+      rgba(255, 255, 0, 0.45), 
+      rgba(255, 255, 0, 0.45)
+    ),
+    url(orange1.png);
+}
+.crossfade{
+  position:relative;
+}
+.crossfade img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.crossfade img.top:hover {
+  opacity:0;
+}
+
+#test {
+  background: url(animate.gif) no-repeat ;
+}
+/* twitter sprite from here http://minimalmonkey.com/fun-animations-with-css3/ */
+.contain {
+  display: inline-block;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  height: 220px;
+  margin: -110px 0 0;
+  position: relative;
+  float: left;
+}
+.twitter-bird {
+
+  background-image: url(images/twitter-bird-sprite-gr10.png);
+  display: inline-block;
+  height: 220px;
+  margin: 0 -5% 0 0;
+  width: 220px;
+}
+
+.twitter-bird:hover {
+  -webkit-animation: fly 0.3s steps(3) 0 infinite;
+  -moz-animation: fly 0.3s steps(3) 0 infinite;
+  animation: fly 0.3s steps(3) 0 infinite;
+}
+
+@-webkit-keyframes fly {
+  from { background-position: 0 0; }
+    to { background-position: -660px 0; }
+}
+@-moz-keyframes fly {
+  from { background-position: 0 0; }
+    to { background-position: -660px 0; }
+}
+@keyframes fly {
+  from { background-position: 0 0; }
+    to { background-position: -660px 0; }
+}
+
+.tint  {
+  -webkit-opacity: 0.25;
+  -moz-opacity: 0.25;
+  opacity: 0.25;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+.tint:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+
+.product-grid li {
+  width: 220px;
+  height: 220px;
+  margin: 12px; /*0 10px 10px 0;*/
+  position:relative;
+  overflow:hidden;
+  float:left;
+}
+.product-grid h2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:20;
+  text-align: left;
+  display: table;
+}
+.product-grid a {
+  color:#000;
+  background:transparent;
+}
+.product-grid h2 a {
+  text-align:center,
+  font-size: 200%;
+  line-height: 1;
+  display:table-cell;
+  vertical-align:midddle;
+  padding: 0 1em;
+}
+.product-grid .pink h2,
+#content .pink {
+  background-color: rgb(254,193,255);
+}
+
+
+/* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
+
+/* 3 COL */
+
+/*@media (max-width: 800px){
+  #grid li{
+    width: 31%;
+    padding-top: 31%;
+    margin-bottom: 3%;
+  }
+}
+
+/* 2 COL */
+/*
+@media (max-width: 600px){
+  #grid li{
+    width: 48%;
+    padding-top: 48%;
+    margin-bottom: 4%;
+  }
+}*/
+
+/* SINGLE COL */
+
+/*@media (max-width: 400px){
+  #grid li{
+    width: 100%;
+    padding-top: 100%;
+    margin-bottom: 5%;
+  }
+}*/
